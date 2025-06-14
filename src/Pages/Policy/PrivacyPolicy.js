@@ -1,0 +1,70 @@
+import React from 'react'
+import './Policy.Styles.scss'
+import ContactUsSection from '../../Components/ContactUsSection/ContactUsSection'
+
+const PrivacyPolicy = () => {
+  return (
+    <div className='policy-page'>
+      <h1 className='title'>Privacy Policy</h1>
+      <div className='text'>
+        <p>This Privacy Policy (“Privacy Policy”) governs how RiceHouse (“RH” “we”, “us” or “our”) through of [www.ricehouse.in] website and RiceHouse mobile application, (“Platform”) processes, uses, collects, discloses, transfers, stores, and retains user’s (“User”, “you” or “your”) information. RH recognizes the importance of privacy as well as the importance of maintaining the confidentiality of User Data (defined hereunder).</p>
+        <p>The Platform enables purchase of Products and extension of Services to the Users as specified in the Terms of Use. By downloading, and using the Platform, and/or, providing your information for availing our Services, you expressly agree to be bound by this Privacy Policy and the applicable Terms of Use. We value the trust you place in us and respect your privacy, maintaining the highest standards for secure transactions and protection of User Data (defined hereunder).</p>
+        <p>You are requested to review the Privacy Policy from time to time to keep yourself updated with any changes; modifications made to terms hereof.</p>
+        <p>All capitalized terms not defined in this document shall have the meanings ascribed to them in the Terms of Use, which can be found here.</p>
+        <br />
+        <p><b>1. CONSENT</b></p>
+        <p>By using the Platform and the Services, you agree and consent to collection, transfer, use, storage, disclosure, and sharing of your information as described and collected by us in accordance with this Policy. If you do not agree with the Policy, please do not use or access the Platform.</p>
+        <br />
+        <p><b>2. USER DATA AND PURPOSE OF COLLECTION</b></p>
+        <p>Personal data is information that enables us to identify any natural person (including you) or relates to an identified or identifiable natural person (“Personal Data”). When you access or use the Platform you may provide, or we may collect information that may specifically identify You or any other individual, this may also include sensitive personal data or information (“SPDI”) such as financial information as detailed below. Your privacy is important to us and we have taken steps to ensure that we do not collect more information from you than is necessary for to us to provide you Services and to protect your account.</p>
+        <p>Given below are the types of information (“User Data”) We may collect:</p>
+        <p> • Personal /Registration Information- Information including, but not limited to, User(s) name, address, phone number, email address, gender, date and/or year of birth, and User preferences may be collected at the time of User registration on the Platform.</p>
+        <p> • Account Information- Information, including but not limited to, bank account numbers, billing and delivery information, and tracking information from cheques or money orders.</p>
+        <p> • Browsing Information- Records of your browsing or buying activities on Platform including but not limited to IP addresses, browsing patterns and your behavioral patterns, and cookies or similar technologies.</p>
+        <p> • Log & Usage Information- We may collect data about how you interact with the services offered by Platform. This includes data such as access dates and times, crashes and other system activity, and names of relevant third-party services used pursuant to interacting with our services.</p>
+        <p>In addition to the purposes outlined above, you may also voluntarily provide Personal Data to us such as images, remarks, feedbacks etc. This is completely optional, and we will use this Personal Data in connection with the purpose for which it was collected, or to improve our Products and Services. If you voluntarily submit any information to the Platform through the publishing tools, then you are deemed to have given consent to the publication of such information on the Platform. User(s) should exercise caution when deciding to include personal or proprietary information in the voluntary information that User(s) submits to RH or uploads on the Platform.</p>
+        <p>Moreover, to the extent that Personal Data you share with us is not your own (i.e., for example, you are a representative of an User of the Platform, or are sharing information on behalf of an employer, representative, or family member), you warrant that you have the right to provide such Personal Data, and you and the business with which you are associated shall be fully responsible for any liability arising from any such use of Personal Data, including indemnifying RH for any loss.</p>
+        <p>If you share Personal Data with us that is not your own, you agree to inform such persons which may include your agents, employer, or any authorized personnel (e.g., contractors, partners, or authorized third parties): (i) that their Personal Data may be processed by us; and (ii) of their rights regarding the processing of their Personal Data in accordance with this Privacy Policy and the Applicable Laws.</p>
+        <p>To the extent possible, we provide you the option of not divulging any specific information that you wish for us not to collect, store or use. You may choose to opt out of any non-essential communications from RH by communicating the same to our Grievance Officer. Depending on the particular product and/or service, some of the information we ask you to provide is identified as mandatory and some is identified as voluntary. If you do not provide the mandatory information for a particular product and/or service that requires it, you will not be permitted to avail such product and/or service.</p>
+        <p>Further, we may collect data that is not identifiable to you or otherwise associated with you, such as aggregated data, which is not Personal Data. We will not attempt to identify you from this data. To the extent this data is not identifiable or associated with any person it is not subject to this Privacy Policy.</p>
+        <br />
+        <p><b>3. DISCLOSURE OF USER DATA</b></p>
+        <p>We may share or disclose User Data only as permissible under Applicable Laws and as per terms of this Privacy Policy. We may share your personal information in the course of providing Services and processing your transactions and other instructions with different persons and entities such as affiliates or group companies, financial institutions, vendors, service providers, logistic partners, other entities participating in a payment system, business associates, government and regulatory authorities, consultants and internal departments. We take reasonable efforts to ensure that such third-party has implemented measures to assure protection of data and follow practices at least as protective as those described in this Privacy Policy. This sharing of User Data is on a need-to-know basis.</p>
+        <p>We may also transfer User Information to a potential buyer, acquirer, transferee, assignee, merger partner or their advisors in connection with a sale, transfer, merger, consolidation or purchase of some or more of our assets or businesses or in exploration of such a transaction, as well as any restructuring or rearrangement of our operations and business.</p>
+        <br />
+        <p><b>4. COOKIES</b></p>
+        <p>RH uses “cookies” and similar tracking technologies such as pixel tags, web beacons, flask cookies to enhance User experience, improve our Services, and provide personalized content and advertisements. A “cookie” is a small text file that is stored on your device when you visit our Platform. These cookies may be session-based (temporary) or persistent (stored for a longer duration). Our Platform may also allow third-party services to place cookies on your device for analytics, advertising, or audience measurement. These third parties may collect information about your online activities over time and across different websites. We encourage you to review their privacy policies for more details.</p>
+        <p>By using our Platform with your browser settings set to accept cookies, you consent to our use of cookies and tracking technologies in the manner described above.By using our Platform with your browser settings set to accept cookies, you consent to our use of cookies and tracking technologies in the manner described above.</p>
+        <p>Users can modify their browser settings to accept, block, or delete cookies. To manage cookie settings, please visit your browser’s settings. Please know, though, that if you choose to delete or block your cookies, you will lose the ability to save certain preferences, such as your username and password. If you delete or block your cookies, you will, for example, need to re-enter your log-in credentials to gain access to certain Services provided by Platform upon each visit.</p>
+        <br />
+        <p><b>5. MINORS</b></p>
+        <p>We do not knowingly collect, process, or store Personal Data of individuals under the age of 18 years. Our Services are intended for use only by individuals who have attained the age of majority and are legally permitted to engage in financial transactions under Applicable Laws.</p>
+        <p>If we become aware that Personal Data of a minor has been collected without verifiable parental consent, we will take appropriate steps to delete such data.</p>
+        <p>Parents or legal guardians who believe that a minor has provided their Personal Data may contact us at details provided in Paragraph 11 to request deletion or exercise any other rights under Applicable Law.</p>
+        <p>Minors are advised not to use Platform or provide any personal information. By accessing and using our services, you confirm that you are at least 18 years of age or have obtained parental/legal guardian consent where required.</p>
+        <br />
+        <p><b>6. USER RIGHTS</b></p>
+        <p>In accordance with Applicable Laws, you may be entitled to a variety of legal rights regarding the collection and processing of your Personal Data. You may exercise these rights by contacting us. We may request certain additional information (that may include Personal Data) that may be reasonably required to authenticate your identity, your request, and/or to clarify or understand the scope of such requests.</p>
+        <br />
+        <p><b>7. WITHDRAWAL OF CONSENT</b></p>
+        <p>RH takes all reasonable steps to ensure that User’s personal information is processed ‘as is’. You have an option to withdraw your consent that you have already provided by writing to us at the contact information provided. Please mention “for withdrawal of consent” in the subject line of your communication. RH will verify such requests before acting upon your request.</p>
+        <p>Please note, however, that withdrawal of consent will not be retroactive and will be in accordance with the terms of this Privacy Policy, related terms of use, and Applicable Laws. In the event you withdraw the consent given to us under this Privacy Policy, such withdrawal may hamper your access to the Platform or restrict the provision of our Services to you for which RH consider that information to be necessary.</p>
+        <br />
+        <p><b>8. SECURITY MEASURES</b></p>
+        <p>RH employs commercially reasonable security methods to prevent unauthorized access to the Platform, to maintain data accuracy and to ensure the correct use of the information RH holds. No data transmission over the internet or any wireless network can be guaranteed to be perfectly secure. As a result, while RH tries to protect the information RH holds, RH cannot guarantee the security of any information the User transmits to RH and User(s) do so at their own risk.</p>
+        <p>The Platform intends to protect your Personal Data to maintain its accuracy as confirmed by you. We implement reasonable physical, administrative, and technical safeguards to help us protect your personal information from unauthorized access, use and disclosure.</p>
+        <p>Please note that we will not ask you to share any sensitive data or information such as account / login / passwords / financial information (bank details, OTPs etc.) and other sensitive personal information via email / telephone / SMS / link. Please do not share such information with any person.</p>
+        <p>RH endeavours to safeguard the confidentiality of your Personal Data, however, transmissions made by means of the internet cannot be made absolutely secure. RH will have no liability for disclosure of your information due to errors in transmission and / or unauthorized acts of third-parties.</p>
+        <br />
+        <p><b>9. RETENTION OF DATA</b></p>
+        <p>RH retains your personal information in accordance with Applicable Laws, for a period no longer than is required for the purpose for which it was collected or as required under any Applicable Law.</p>
+        <br />
+        <p><b>10. CHANGES TO THIS PRIVACY POLICY</b></p>
+        <p>Any changes to this Privacy Policy will be communicated by us posting an amended and restated Privacy Policy on the Platform. Once posted on the Platform the new Privacy Policy will be effective immediately. Your continued use of the Platform shall be deemed to be your acceptance to the provisions of the Privacy Policy. User(s) agrees that any information HEPL hold about User (as described in this Privacy Policy and whether or not collected prior to or after the new Privacy Policy became effective) will be governed by the latest version of the Privacy Policy. </p>
+      </div>
+      <ContactUsSection />
+    </div>
+  )
+}
+
+export default PrivacyPolicy

@@ -1,0 +1,26 @@
+.policy-page{
+
+  .title{
+    height: 15rem;
+    background-color: #173B45;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 5rem;
+    padding-bottom: 2rem;
+  }
+
+  .text{
+    color: #173B45;
+    width: 80%;
+    margin: auto;
+    font-size: 14px;
+    padding: 3rem 0;
+    line-height: 18px;
+
+    p{
+      margin-bottom: 2rem;
+    }
+  }
+}

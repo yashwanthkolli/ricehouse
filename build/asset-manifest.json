@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.aea1e05c.css",
+    "main.js": "/static/js/main.ab845000.js",
+    "static/js/488.5dc00adb.chunk.js": "/static/js/488.5dc00adb.chunk.js",
+    "static/media/background5.png": "/static/media/background5.267627b62a546a2305f4.png",
+    "static/media/background.png": "/static/media/background.7381abca975daacfd485.png",
+    "static/media/special.png": "/static/media/special.8313e68be3eb047c88a0.png",
+    "static/media/background4.png": "/static/media/background4.f39b571621a6ca564894.png",
+    "static/media/background6.png": "/static/media/background6.462b9ee74a8fa9fc0c1e.png",
+    "static/media/background2.png": "/static/media/background2.20cd141f07cbf18f728e.png",
+    "static/media/background3.png": "/static/media/background3.4cb02a80839ec7924a07.png",
+    "static/media/background.jpg": "/static/media/background.c6161c39826bb5017458.jpg",
+    "static/media/aboutUs.jpg": "/static/media/aboutUs.9afe932bd6383d363263.jpg",
+    "static/media/login.jpg": "/static/media/login.cb0f90934903d8859db5.jpg",
+    "static/media/whyUs.jpg": "/static/media/whyUs.164e84d33ccb59f9ec2e.jpg",
+    "static/media/signUp.jpg": "/static/media/signUp.155e5dfe47f82501142b.jpg",
+    "static/media/logo.png": "/static/media/logo.fbd78ba255289d2b30ee.png",
+    "index.html": "/index.html",
+    "main.aea1e05c.css.map": "/static/css/main.aea1e05c.css.map",
+    "main.ab845000.js.map": "/static/js/main.ab845000.js.map",
+    "488.5dc00adb.chunk.js.map": "/static/js/488.5dc00adb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aea1e05c.css",
+    "static/js/main.ab845000.js"
+  ]
+}
