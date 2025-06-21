@@ -74,7 +74,7 @@ const ReturnPolicy = () => {
         </p>
         <p><b>5. REJECTION AT THE TIME OF DELIVERY</b></p>
         <p>If the Shipment is damaged, the Buyer may be entitled to reject and return the Shipment at the time of delivery: (i) The Buyer must immediately notify the delivery personnel and clearly state the rejection of the Shipment. Any visible damages or discrepancies with the Shipment must be reported before signing the delivery receipt; (ii) The Buyer must have signed and have mentioned the nature of the damage or issue on the delivery receipt, mentioning the reason for rejection is clearly noted. </p>
-        <p>The damaged Products will be returned to our facility by the delivery personnel at no cost to the Buyer and we will initiate an inspection of the Products within 48 (forty eight) hours. If damage is confirmed, confirmation will be sent to the Buyer acknowledging the Products as undelivered shipment and the refund will be credited to the original payment method used by the Buyer within 7 (seven) working days.</p>
+        <p>The damaged Products will be returned to our facility by the delivery personnel at no cost to the Buyer and we will initiate an inspection of the Products within 48 (forty eight) hours. If damage is confirmed, confirmation will be sent to the Buyer acknowledging the Products as undelivered shipment and the refund will be credited to the original payment method used by the Buyer within 2 (two) working days.</p>
       </div>
       <ContactUsSection />
     </div>
