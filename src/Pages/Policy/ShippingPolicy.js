@@ -9,6 +9,7 @@ const ShippingPolicy = () => {
         <p>This Shipping Policy ("<strong>Policy</strong>") is applicable to Undelivered Shipments. This Policy applies to all Orders placed with RiceHouse (herein after referred to as '<strong>RH</strong>' or '<strong>us</strong>' or '<strong>our</strong>' or '<strong>we</strong>') by you ("<strong>User</strong>", "<strong>you</strong>", "<strong>Buyer</strong>" or "<strong>your</strong>") through <a href="/">www.ricehouse.in</a> website and RiceHouse mobile application ("<strong>Platform</strong>").</p>
         <p>Any capitalized terms used herein this Policy and not defined explicitly shall have the same meaning as defined in the Terms of Use, as may be amended from time to time.</p>
         <p>We may modify this Policy from time to time, and any such changes will be reflected on the Platform and is effective immediately upon the changes being reflected on the Platform. If you do not agree to the terms contained in this Policy, you are advised not to accept the Terms of Use and this Policy and may forthwith leave and stop using the Platform. Users agree to be bound to any such changes or modifications and understand and accept the importance of regularly reviewing this Policy as updated on the Platform from time to time.</p>
+        <p>We or our third-party logistics partner will deliver the product within 30 (thirty) days from the date of purchase.</p>
         <h2>I. Delivery of Shipment to Buyer:</h2>
         <br />
         <ol>
