@@ -13,7 +13,7 @@ const ShippingPolicy = () => {
         <br />
         <ol>
           <li>
-            <p>We or our third-party logistics partner will attempt to deliver the Shipment to the Buyer for a maximum of 1 (one) attempt. However, in case of the occurrence of any one of the following event during the first delivery attempt, we may make no more than one (1) attempt to deliver the Shipment:</p>
+            <p>We or our third-party logistics partner will attempt to deliver the Shipment to the Buyer for a maximum of 1 (one) attempt within 30 (thirty) days from the date of purchase. However, in case of the occurrence of any one of the following event during the first delivery attempt, we may make no more than one (1) attempt to deliver the Shipment:</p>
             <p>a. Address of the Consignee is not found to deliver the Shipment during the first attempt; or</p>
             <p>b. The Buyer has provided incorrect or incomplete shipping details.</p>
           </li>
@@ -34,7 +34,7 @@ const ShippingPolicy = () => {
         <br />
         <ol>
         <li>
-        <p>If the Buyer has made the payment in advance for the Products/ Services purchased at the time of placing the Order on the Platform and the Shipment is marked as Undelivered Shipment, the refund will be processed through the same channel of payment which was used by the Buyer to make the payment within 2 (two) business days;</p>
+        <p>If the Buyer has made the payment in advance for the Products/ Services purchased at the time of placing the Order on the Platform and the Shipment is marked as Undelivered Shipment, the refund will be credited through the same channel of payment which was used by the Buyer to make the payment within 2 (two) business days;</p>
         </li>
         <li>
         <p>If the refund is not processed to the Buyer within 2 (two) working days, the Buyer can connect with our 'Customer Support' and report the concern;</p>
@@ -43,7 +43,7 @@ const ShippingPolicy = () => {
         <p>udaan will conduct a thorough investigation with our shipping partner to determine the cause of the delay or failure;</p>
         </li>
         <li>
-        <p>A full refund will be processed to the Buyer's Account within 2 (two) working days from the date of refund request raised by the Buyer through the same channel of payment which was used by the Buyer to make the payment.</p>
+        <p>A full refund will be credited to the Buyer's Account within 2 (two) working days from the date of refund request raised by the Buyer through the same channel of payment which was used by the Buyer to make the payment.</p>
         </li>
         </ol>
         <h2>III. Return and Refund of Products</h2>
