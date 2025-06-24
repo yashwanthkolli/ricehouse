@@ -18,22 +18,14 @@ const ContactUsSection = () => {
         <div className='content' data-aos='fade-up' data-aos-duration='1000'>
           <div className='row contact'>
             <div className='phone'>
-              <h3>Kanchana G</h3>
-              <h5>Director</h5>
-              <p>+91 97318 35143</p>
-              <p>+91 97413 87143</p>
-            </div>
-            <div className='phone'>
-              <h3>V Manoj Kumar</h3>
-              <h5>Proprietor</h5>
+              <h3>Call Us</h3>
+              <p>+91 99168 35143</p>
               <p>+91 82969 35143</p>
-              <p>+91 85489 78808</p>
             </div>
             <div className='phone'>
-              <h3>Vinay C</h3>
-              <h5>Proprietor</h5>
-              <p>+91 96116 63106</p>
-              <p>+91 78928 59001</p>
+              <h3>Mail Us</h3>
+              <p>ricehouse143@gmail.com</p>
+              <p>varija.3005@gmail.com</p>
             </div>
           </div>
           <div className='row'>
@@ -46,8 +38,11 @@ const ContactUsSection = () => {
               </p>
             </div>
             <div className='mail'>
-              <h3>Mail Us At</h3>
-              <p>varija.3005@gmail.com</p>
+              <p>
+                No. 12, 3rd Cross, 1st <br />
+                Main Road, Vinayaka Layout, <br />
+                Nayandalli, Bangalore- 39
+              </p>
             </div>
           </div>
         </div>
@@ -65,7 +60,7 @@ const ContactUsSection = () => {
             <FiPhone className='link' />
           </a>
           <a
-            href='https://maps.app.goo.gl/KzMGdqWkogRHqBqV6'
+            href='https://maps.app.goo.gl/am1prqMjPrST6z4y9'
             target='_blanck'
             rel='noreferrer'
           >

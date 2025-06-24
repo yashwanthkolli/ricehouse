@@ -20,7 +20,6 @@ const PaymentButton = ({ cartItems, totalAmount, address, phone, userId }) => {
         products: cartItems
       });
       
-      console.log(paymentResponse.data)
       // Redirect to PhonePe payment page
       window.location.href = paymentResponse.data.checkoutUrl;
     } catch (error) {

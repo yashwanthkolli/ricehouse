@@ -7,6 +7,7 @@ import axios from 'axios'
 import setAuthToken from '../../utils/setAuthToken'
 
 import './Orders.Styles.scss'
+import OrderCard from '../../Components/OrderCard/OrderCard'
 
 const Orders = () => {
   const [orders, setOrders] = useState([])
@@ -27,7 +28,6 @@ const Orders = () => {
     })
   }, [])
 
-  console.log(orders)
   return (
     <div className='orders-page'>
       <div className='nav'>
@@ -37,11 +37,11 @@ const Orders = () => {
       </div>
       <div className='content'>
         {
-          orders || orders.lenght > 0 ?
+          orders || orders.length > 0 ?
           <div className='orders-container'>
             {
               orders.map(order => 
-                <div className='order'>{order.amount}{order.status}</div>
+                <OrderCard key={order._id} order={order} />
               )
             }
           </div>

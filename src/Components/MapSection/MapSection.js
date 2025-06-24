@@ -32,6 +32,11 @@ class MapSection extends React.Component {
                                     Open in <a href='https://maps.app.goo.gl/rraXn4dwK7We6z5K8' target='_blanck'>Google Maps</a>
                                 </Popup>
                             </Marker>
+                            <Marker position={[12.947639, 77.520330]}>
+                                <Popup>
+                                    Open in <a href='https://maps.app.goo.gl/am1prqMjPrST6z4y9' target='_blanck'>Google Maps</a>
+                                </Popup>
+                            </Marker>
                     </MapContainer>
                 </div>
                 <div className='background'></div>
