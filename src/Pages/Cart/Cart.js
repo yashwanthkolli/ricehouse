@@ -9,6 +9,7 @@ import { MdOutlineDeleteForever } from "react-icons/md";
 import { toast } from 'react-toastify';
 import { IoIosClose } from 'react-icons/io'
 import Input from '../../Components/Input/Input';
+import PaymentButton from '../../Components/PaymentButton/PaymentButton';
 
 
 const Cart = () => {
@@ -65,85 +66,6 @@ const Cart = () => {
     setAddress2(e.target.value)
   }
 
-  const handleCheckout = async () => {
-    setIsOpen(false)
-    if(address1, phone){
-      try{
-        const response = await axios.post('https://ricehouse.in/backend/api/order', {amount: cart.bill, cart});
-        const { id: order_id, amount, currency } = response.data;
-
-        const options = {
-          key: "rzp_test_7XKpFANzSY8VcJ", // Replace with your RazorPay Key ID
-          amount: amount,
-          currency: currency,
-          name: "Rice House",
-          description: "Test Transaction",
-          order_id: order_id,
-          handler: async (response) => {
-              alert(`Payment Successful! Payment ID: ${response.razorpay_payment_id}`);
-              await axios.post('https://ricehouse.in/backend/api/order/create', {cart, paymentId: response.razorpay_payment_id, phone, address: address1+address2})
-              .then(res => {
-                setUpdate(prevUpdate => !prevUpdate);
-                toast("Order Successfully Placed!", {
-                  type: 'success',
-                  isLoading: false,
-                  autoClose: 5000
-                })
-              })
-              .catch(err => {
-                toast("Failed to Update Order", { 
-                  type: "error", 
-                  isLoading: false,
-                  autoClose: 5000
-                });
-              })
-          },
-          prefill: {
-              name: "John Doe",
-              email: "john.doe@example.com",
-              contact: "9999999999",
-          },
-          config: {
-            display: {
-              blocks: {
-                utib: {
-                  name: 'Pay with UPI',
-                  instruments: [
-                    {method: 'upi'}
-                  ]
-                }
-              },
-              sequence: ["block.utib", 'block.banks'],
-              preferences: {
-                show_default_blocks: true,
-              },
-            },
-          },
-          theme: {
-              color: "#3399cc",
-          },
-        };
-
-        const paymentObject = new window.Razorpay(options);
-        paymentObject.on('payment.failed', function (response){
-          alert(response.error.code);
-          alert(response.error.description);
-
-          paymentObject.close()
-        })
-        paymentObject.open();
-      } catch (error) {
-        console.error('Payment initiation failed:', error);
-      }
-    } else {
-      toast("Please enter address and phone number", { 
-        type: "error", 
-        isLoading: false,
-        autoClose: 5000
-      });
-    }
-  }
-
   return (
     <>
       <div className='cart-page'>
@@ -197,7 +119,8 @@ const Cart = () => {
             onChange={handlePhoneChange}
             white
           />
-          <button className='order-button' onClick={handleCheckout}>Checkout</button>
+          {/* <button className='order-button' onClick={handleCheckout}>Checkout</button> */}
+          <PaymentButton cartItems={cart.products} totalAmount={cart.bill} address={address1 + address2} phone={phone} userId={cart.userId} />
         </div>
         <div className='close' onClick={closeDialog}>
           <IoIosClose />

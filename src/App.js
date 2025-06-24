@@ -20,6 +20,8 @@ import TandC from './Pages/Policy/TandC';
 import ReturnPolicy from './Pages/Policy/ReturnPolicy';
 import PrivacyPolicy from './Pages/Policy/PrivacyPolicy';
 import ShippingPolicy from './Pages/Policy/ShippingPolicy';
+import OrderStatus from './Pages/OrderStatus/OrderStatus';
+import Orders from './Pages/Orders/Orders';
 
 function App() {
   useEffect(() => {
@@ -41,6 +43,8 @@ function App() {
         <Route path='/returnpolicy' element={<ReturnPolicy />} />
         <Route path='/privacypolicy' element={<PrivacyPolicy />} />
         <Route path='/shippingpolicy' element={<ShippingPolicy />} />
+        <Route path='/status/:orderId' element={<OrderStatus />} />
+        <Route path='/orders' element={<Orders />} />
 
         {/* <Route path='/service/:serviceName' exact component={ServicePage} /> */}
       </Routes>

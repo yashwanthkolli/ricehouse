@@ -1,0 +1,15 @@
+.orders-page {
+  position: relative;
+  width: 100%;
+  color: #173B45;
+  min-height: calc(100vh - 3.4rem);
+
+  .content{
+        width: 70%;
+        position: relative;
+        margin: auto;
+        padding-top: 16rem;
+        padding-bottom: 10rem;
+        font-size: 2rem;
+  }
+}
