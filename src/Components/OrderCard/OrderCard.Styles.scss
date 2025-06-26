@@ -27,4 +27,25 @@
       font-size: 2rem;
     }
   }
+
+  .product-details {
+    width: 90%;
+    margin: 3rem auto;
+
+    table {
+      width: 100%;
+    }
+
+    table tr {
+      width: 100%;
+      justify-content: space-between;
+
+      td {
+        text-align: center;
+      }
+    }
+  }
+  .cart-card {
+    border-bottom: none;
+  }
 }

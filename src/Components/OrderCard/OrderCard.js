@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import './OrderCard.Styles.scss'
+import axios from 'axios'
+import { toast } from 'react-toastify'
 
 const OrderCard = ({order}) => {
+  const [totalQuantity, setTotalQuantity] = useState(0)
+
+  useEffect(() => {
+    let quantity = order.products.reduce((acc, cur) => {
+      return acc + cur.quantity
+    }, 0)
+    setTotalQuantity(quantity)
+  },[])
   console.log(order)
   return (
     <div className='order-card'>
@@ -11,14 +21,11 @@ const OrderCard = ({order}) => {
         <span className='delivery-status'>Delivery Status: {order.deliveryStatus}</span>
       </div>
       <div className='product-details'>
-      {
-        order.products.map(product => 
-          <div>
-            <span>{product.name}</span>
-            <span>{product.quantity}</span>
-          </div>
-        )
-      }
+        {
+          order.products.map(product => 
+            <OrderedProduct prod={product} totalQuantity={totalQuantity} />
+          )
+        }
       </div>
       <div className='other-details'>
         <div className='address'>
@@ -35,5 +42,40 @@ const OrderCard = ({order}) => {
     </div>
   )
 }
+
+const OrderedProduct = ({prod, totalQuantity}) => {
+  const [product, setProduct] = useState({})
+
+  useEffect(() => {
+    axios.get(`https://ricehouse.in/backend/api/prod/${prod.prodId}`)
+    .then(res => setProduct(res.data))
+    .catch(err => {
+      toast("Failed to Load Cart", { 
+        type: "error", 
+        isLoading: false,
+        autoClose: 5000
+      });
+    })
+  }, [])
+
+  return(
+    <div className='cart-card'>
+      <div className='img-container'>
+        <img src={product.imgUrl} alt={product.prodId} />
+      </div>
+      <div className='title'>
+        <h1 className='heading'>{product.name}</h1>
+        <h4 className='sub-heading'>₹ {totalQuantity < 10 ? product.retail : product.wholesale}</h4>
+      </div>
+      <div className='quantity'>
+        {prod.quantity}
+      </div>
+      <div className='prices'>
+        ₹ { totalQuantity < 10 ? prod.retail*prod.quantity : prod.wholesale*prod.quantity }
+      </div>
+    </div>
+  )
+}
+
 
 export default OrderCard

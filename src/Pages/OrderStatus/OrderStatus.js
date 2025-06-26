@@ -44,10 +44,10 @@ const OrderStatus = () => {
           :
           <div>
             {
-              paymentDetails.status && paymentDetails.status === 'FAILED' ?
-              <p>Your payment has been <span className='error'>failed</span>. Your order is not complete. Please try again!</p>
-              :
+              paymentDetails.status && paymentDetails.status === 'COMPLETED' ?
               <p>Your payment has been completed. Your order has been placed. OrderId: {orderId}</p>
+              :
+              <p>Your payment has been <span className='error'>failed</span>. Your order is not complete. Please try again!</p>
             }
             <div className='links'>
               <Link to='/'>Shop Again</Link>
