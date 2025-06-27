@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './SpecialSection.Styles.scss'
 
-import specialImg from '../../Assets/Products/special.png'
 import axios from 'axios'
 import { toast } from 'react-toastify'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
@@ -31,7 +30,7 @@ const SpecialSection = () => {
     <div className='special-section'>
       <div className='product'>
         <div className='img-container'>
-          <img src={specialImg} alt='special-product' />
+          <img src={prod.imgUrl} alt='special-product' />
         </div>
         <div className='name'>{prod.name}</div>
       </div>

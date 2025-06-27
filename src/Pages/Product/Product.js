@@ -4,7 +4,6 @@ import { toast } from 'react-toastify';
 import { useNavigate, useParams } from 'react-router-dom'
 import Menu from '../../Components/Menu/Menu'
 import LoginIcon from '../../Components/LoginIcon/LoginIcon'
-import specialImg from '../../Assets/Products/special.png'
 import axios from 'axios'
 import setAuthToken from  '../../utils/setAuthToken'
 import BackButton from '../../Components/BackButton/BackButton';
@@ -87,7 +86,7 @@ const Product = () => {
                 <div className='content'>
                     <div className='img-section'>
                         <div className='img-container'>
-                            <img src={specialImg} alt='prod' />
+                            <img src={product.imgUrl} alt='prod' />
                         </div>
                         <div className='background'></div>
                     </div>

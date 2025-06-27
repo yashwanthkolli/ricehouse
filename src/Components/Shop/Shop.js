@@ -38,7 +38,7 @@ const Shop = () => {
             <div className='shop'>
                 <div className='nav'>
                     <div className='filter-container'>
-                        <span className='icon'><LuSettings2 /></span>Filter
+                        {/* <span className='icon'><LuSettings2 /></span>Filter */}
                     </div>
                     <div className='search-container'>
                         <label className="input">

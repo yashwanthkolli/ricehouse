@@ -7,7 +7,7 @@ const ProductCard = ({product, shopType}) => {
         <Link className='product-card' to={'/product/' + shopType + '/' + product.prodId}>
             <div className='img-section'>
                 <div className='img-container'>
-                    <img src='https://i.postimg.cc/YSszhCN7/special.png' alt={product.prodId} />
+                    <img src={product.imgUrl} alt={product.prodId} />
                 </div>
                 <div className='background'></div>
             </div>
