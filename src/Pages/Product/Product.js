@@ -58,7 +58,7 @@ const Product = () => {
             .catch(err => {
                 console.log((err))
                 toast.update(toastId, { 
-                    render: "Unable to Update Cart", 
+                    render: "Please Login to Use Cart", 
                     type: "error", 
                     isLoading: false,
                     autoClose: 5000

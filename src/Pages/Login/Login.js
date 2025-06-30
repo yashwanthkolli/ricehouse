@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { FcGoogle } from 'react-icons/fc'
 import { IoIosClose } from 'react-icons/io'
@@ -12,7 +12,21 @@ import axios from 'axios'
 const Login = () => {
   const [phone, setPhone] = useState('')
   const [password, setPassword] = useState('')
+  const [isOpen, setIsOpen] = useState(false);
+  const [resetPhone, setResetPhone] = useState('')
+  const dialogRef = useRef()
   const navigate = useNavigate()
+
+  useEffect(() => {
+      if (isOpen) {
+        dialogRef.current?.showModal();
+      } else {
+        dialogRef.current?.close();
+      }
+    }, [isOpen]);
+    
+  const openDialog = () => setIsOpen(true) 
+  const closeDialog = () => setIsOpen(false) 
 
   const handlePhoneChange = e => {
     setPhone(e.target.value)
@@ -20,6 +34,10 @@ const Login = () => {
 
   const handlePasswordChange = e => {
     setPassword(e.target.value)
+  }
+
+  const handleResetPhoneChange = e => {
+    setResetPhone(e.target.value)
   }
 
   const handleLogin = async () => {
@@ -48,17 +66,33 @@ const Login = () => {
       })
   }
 
-  const loginWithGoogle = () => {
-    window.open('http://localhost:5000/api/auth/google/callback', '_self')
-  }
-
   const handleClose = () => {
     navigate(-1)
   }
 
+  const handleResetPassword = async () => {
+    await axios.post('https://ricehouse.in/backend/api/auth/changepassword', { phone: resetPhone })
+    .then(res => {
+      setIsOpen(false)
+      setPhone('')
+      toast("Email sent Successfully", { 
+        type: "success", 
+        isLoading: false,
+        autoClose: 5000
+      });
+    })
+    .catch(err => {
+      toast("Failed to Send Email", { 
+        type: "error", 
+        isLoading: false,
+        autoClose: 5000
+      });
+    })
+  };
+
   return (
     <div className='login-page'>
-      <div className='content'>
+      <div className='contenty'>
         <div className='close' onClick={handleClose}>
           <IoIosClose />
         </div>
@@ -83,30 +117,51 @@ const Login = () => {
           <div className='logo-container'>Rice House</div>
           <div className='inputs'>
             <Input
+              value={phone}
               placeholder='Email'
               type='text'
               onChange={handlePhoneChange}
             />
             <Input
+            value={password}
               placeholder='Password'
               type='password'
               onChange={handlePasswordChange}
             />
+            <div className='forgot-password-container'>
+              <button className='forgot-password' onClick={openDialog}>Forgot Password</button>
+            </div>
           </div>
           <div className='buttons-container'>
             <button className='button' onClick={handleLogin}>
               Login
             </button>
           </div>
-          <div className='space'>
+          {/* <div className='space'>
             <div className='line'></div>
             <div className='text'>or</div>
           </div>
           <button className='googleLogin' onClick={loginWithGoogle}>
             <FcGoogle className='icon' /> Continue with Google
-          </button>
+          </button> */}
         </div>
       </div>
+      <dialog className='address-dialog' ref={dialogRef} onCancel={closeDialog}>
+          <div className='content'>
+            <div className='text'>Please enter the email accociated with the account. You will receive a password reset link. Please check your spam folder as well.</div>
+            <Input
+              value={resetPhone}
+              placeholder='Email'
+              type='text'
+              onChange={handleResetPhoneChange}
+              white
+            />
+            <button className='order-button' onClick={handleResetPassword}>Reset Password</button>
+          </div>
+          <div className='close' onClick={closeDialog}>
+            <IoIosClose />
+          </div>
+        </dialog>
     </div>
   )
 }

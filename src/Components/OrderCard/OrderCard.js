@@ -13,7 +13,7 @@ const OrderCard = ({order}) => {
     }, 0)
     setTotalQuantity(quantity)
   },[])
-  console.log(order)
+  
   return (
     <div className='order-card'>
       <div className='header'>
@@ -23,7 +23,7 @@ const OrderCard = ({order}) => {
       <div className='product-details'>
         {
           order.products.map(product => 
-            <OrderedProduct prod={product} totalQuantity={totalQuantity} />
+            <OrderedProduct key={product.name} prod={product} totalQuantity={totalQuantity} />
           )
         }
       </div>

@@ -1,0 +1,70 @@
+.profile-page {
+    position: relative;
+    width: 100%;
+    color: #173B45;
+    min-height: calc(100vh - 3.4rem);
+
+    .content{
+        width: 70%;
+        position: relative;
+        margin: auto;
+        padding-top: 16rem;
+        padding-bottom: 10rem;
+        font-size: 1.6rem;
+    }
+
+    .user-details {
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #173B45;
+
+      .name {
+        font-size: 2.5rem;
+        letter-spacing: 1.5px;
+      }
+
+      .email {
+        font-size: 1.6rem;
+      }
+    }
+
+    .password {
+      font-size: 1.4rem;
+      display: flex;
+      flex-direction: column;
+      padding: 2rem 0;
+
+      
+    }
+
+    .button {
+        width: 30rem;
+        margin-top: 2rem;
+        outline: none;
+        background: #173B45;
+        color: #fff;
+        border: 1px solid #173B45;
+        border-radius: 10px;
+        padding: 2rem 3rem;
+        font-family: 'Roboto Condensed';
+        font-style: normal;
+        font-size: 2rem;
+        line-height: 2.4rem;
+        letter-spacing: 0.1em;
+        transition: all 0.5s;
+        margin-right: 10rem;
+
+        &:hover, &:active{
+            background: #fff;
+            color: #173B45;
+        }
+  }
+
+  dialog {
+    .content {
+      .text {
+        margin-bottom: 5rem;
+      }
+    }
+  }
+
+}

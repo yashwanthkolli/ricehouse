@@ -22,6 +22,10 @@ import PrivacyPolicy from './Pages/Policy/PrivacyPolicy';
 import ShippingPolicy from './Pages/Policy/ShippingPolicy';
 import OrderStatus from './Pages/OrderStatus/OrderStatus';
 import Orders from './Pages/Orders/Orders';
+import Profile from './Pages/Profile/Profile';
+import ResetPassword from './Pages/ResetPassword/ResetPassword';
+import AdminLogin from './Pages/AdminLogin/AdminLogin';
+import AdminDashboard from './Pages/AdminDashboard/AdminDashboard';
 
 function App() {
   useEffect(() => {
@@ -45,7 +49,10 @@ function App() {
         <Route path='/shippingpolicy' element={<ShippingPolicy />} />
         <Route path='/status/:orderId' element={<OrderStatus />} />
         <Route path='/orders' element={<Orders />} />
-
+        <Route path='/profile' element={<Profile />} />
+        <Route path='/auth/resetpassword/:resetToken' element={<ResetPassword />} />
+        <Route path='/admin/login' element={<AdminLogin />} />
+        <Route path='/admin' element={<AdminDashboard />} />
         {/* <Route path='/service/:serviceName' exact component={ServicePage} /> */}
       </Routes>
     </div>

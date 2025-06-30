@@ -112,13 +112,13 @@ const SignUp = () => {
               Sign Up
             </button>
           </div>
-          <div className='space'>
+          {/* <div className='space'>
             <div className='line'></div>
             <div className='text'>or</div>
           </div>
           <button className='googleLogin'>
             <FcGoogle className='icon' /> Continue with Google
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

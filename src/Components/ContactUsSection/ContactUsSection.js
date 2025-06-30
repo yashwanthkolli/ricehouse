@@ -66,7 +66,7 @@ const ContactUsSection = () => {
           >
             <FiMapPin className='link' />
           </a>
-          <a href='https://wa.me/918971545421' rel='noreferrer'>
+          <a href='https://wa.me/918296935143' rel='noreferrer'>
             <FaWhatsapp className='link' />
           </a>
         </div>

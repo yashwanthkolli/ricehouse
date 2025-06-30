@@ -5,8 +5,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 
-  .content {
+  .contenty {
     position: relative;
     width: 70%;
     height: 80vh;
@@ -111,6 +112,22 @@
 
       .inputs {
         width: 70%;
+
+        .forgot-password-container {
+          width: 100%;
+          display: flex;
+          justify-content: end;
+
+          .forgot-password {
+            outline: none;
+            text-decoration: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #173b45;
+            margin-bottom: 2rem;
+          }
+        }
       }
 
       .buttons-container {
@@ -188,11 +205,21 @@
       }
     }
   }
+
+  dialog {
+    .content {
+      .text {
+        font-size: 1.6rem;
+        margin-bottom: 5rem;
+        color: #173b45;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 1000px) {
   .login-page {
-    .content {
+    .contenty {
       width: 80%;
     }
   }
@@ -200,7 +227,7 @@
 
 @media only screen and (max-width: 768px) {
   .login-page {
-    .content {
+    .contenty {
       .img-container{
         .welcome{
           .heading{
@@ -235,7 +262,7 @@
 }
 @media only screen and (max-width: 470px) {
   .login-page {
-    .content {
+    .contenty {
       width: 100%;
       display: flex;
       flex-direction: column;

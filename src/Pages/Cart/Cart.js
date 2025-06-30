@@ -21,7 +21,6 @@ const Cart = () => {
   const [phone, setPhone] = useState('')
 
   const dialogRef = useRef()
-  console.log(cart)
 
   useEffect(() => {
     const token = localStorage.token
