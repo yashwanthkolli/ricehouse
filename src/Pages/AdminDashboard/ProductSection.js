@@ -13,7 +13,8 @@ import {
   Alert,
   Box,Button,
   Dialog, DialogTitle, DialogContent, DialogActions,
-  Fab
+  Fab,
+  Switch 
 } from "@mui/material";
 // import { EditIcon, GetAppIcon } from "@material-ui/icons";
 import axios from "axios";
@@ -26,6 +27,7 @@ const ProductsSection = () => {
   const [errorMsg, setErrorMsg] = useState("");
   const [openDialog, setOpenDialog] = useState(false);
   const [newProduct, setNewProduct] = useState({
+    prodId: null,
     name: "",
     mrp: null,
     wholesale: null,
@@ -69,7 +71,7 @@ const ProductsSection = () => {
   const handleSave = async () => {
     try {
       const productId = editedProduct._id;
-      const res = await axios.put(`https://ricehouse.in/api/prod/${productId}`, editedProduct, {
+      const res = await axios.put(`https://ricehouse.in/backend/api/prod/${productId}`, editedProduct, {
         headers: { Authorization: token }
       });
 
@@ -90,20 +92,22 @@ const ProductsSection = () => {
 
   const handleCreateProduct = async () => {
     try {
-      const res = await axios.post("/api/admin/products", newProduct, {
+      console.log(newProduct)
+      const res = await axios.post("http://localhost:5000/api/prod", newProduct, {
         headers: { Authorization: token }
       });
-      setProducts((prev) => [...prev, res.data.product]);
+      setProducts((prev) => [...prev, res.data]);
       setOpenDialog(false);
       setNewProduct({
+        prodId: 0,
         name: "",
-        mrp: null,
-        wholesale: null,
-        retail: null,
-        imageUrl: "",
+        mrp: 0,
+        wholesale: 0,
+        retail: 0,
+        imgUrl: "",
         type: "",
         age: "",
-        quantity: null,
+        quantity: 0,
         priceperkg: "",
         bagWeight: ""
       });
@@ -111,6 +115,23 @@ const ProductsSection = () => {
       setErrorMsg("Failed to create product");
     }
   };
+
+  const handleToggleDisabled = async (productId, currentValue) => {
+  try {
+    const res = await axios.put(`https://ricehouse.in/backend/api/prod/${productId}`, {
+      disabled: !currentValue
+    }, {
+      headers: { Authorization: token }
+    });
+
+    const updatedProducts = products.map((p) =>
+      p._id === productId ? res.data.product : p
+    );
+    setProducts(updatedProducts);
+  } catch (error) {
+    setErrorMsg("Failed to update product visibility");
+  }
+};
 
   if (loading) return <CircularProgress />;
   if (errorMsg) return <Alert severity="error">{errorMsg}</Alert>;
@@ -129,6 +150,7 @@ const ProductsSection = () => {
               <TableCell sx={{fontSize: '1.6rem'}}>Stock</TableCell>
               <TableCell sx={{fontSize: '1.6rem'}}>Price Per Kg</TableCell>
               <TableCell sx={{fontSize: '1.6rem'}}>Image URL</TableCell>
+              <TableCell sx={{fontSize: '1.6rem'}}>Active</TableCell>
               <TableCell sx={{fontSize: '1.6rem'}}>Actions</TableCell>
             </TableRow>
           </TableHead>
@@ -183,6 +205,7 @@ const ProductsSection = () => {
                     product.wholesale
                   )}
                 </TableCell>
+                
 
                 <TableCell sx={{fontSize: '1.4rem'}}>
                   {editIndex === index ? (
@@ -234,6 +257,14 @@ const ProductsSection = () => {
                   )}
                 </TableCell>
 
+                <TableCell sx={{ fontSize: "1rem" }}>
+                  <Switch
+                    checked={!product.disabled}
+                    onChange={() => handleToggleDisabled(product._id, product.disabled)}
+                    color="primary"
+                  />
+                </TableCell>
+
                 <TableCell sx={{fontSize: '1.4rem'}}>
                   {editIndex === index ? (
                     <IconButton onClick={handleSave} color="primary">
@@ -261,7 +292,7 @@ const ProductsSection = () => {
       <Dialog open={openDialog} onClose={() => setOpenDialog(false)}>
         <DialogTitle>Add New Product</DialogTitle>
         <DialogContent>
-          {["name", "mrp", "wholesale", "retail", "imageUrl", "type", "age", "quantity", "priceperkg", "bagWeight"].map((field) => (
+          {["prodId", "name", "mrp", "wholesale", "retail", "imgUrl", "type", "age", "quantity", "priceperkg", "bagWeight"].map((field) => (
             <TextField
               key={field}
               margin="dense"

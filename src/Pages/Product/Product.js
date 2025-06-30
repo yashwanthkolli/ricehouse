@@ -97,13 +97,13 @@ const Product = () => {
                             <span className='price'>₹ {product[type]}</span>
                         </div>
                         <div className='buttons-section'>
-                            <div className='quantity'>Only <b>{product.quantity}</b> remaining.</div>
+                            {product.quantity <= 0 ? <div className='quantity' style={{color: 'red'}}>Out of Stock</div> : <></>}
                             <div className='buttons'>
                                 <button onClick={handleDecrement} className='quantity-button'>-</button>
                                 <div className='number'>{quantity}</div>
                                 <button onClick={handleIncrement} className='quantity-button'>+</button>
                             </div>
-                            <button className='button' onClick={handleCart}>Add to Cart</button>
+                            <button className='button' onClick={handleCart} disabled={product.disabled || product.quantity < 1}>Add to Cart</button>
                         </div>
                         <div className='details'>
                             <div className='detail'>

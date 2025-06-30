@@ -134,7 +134,26 @@ const CartCard = ({prod, totalQuantity, setUpdate, update}) => {
 
   useEffect(() => {
     axios.get(`https://ricehouse.in/backend/api/prod/${prod.prodId}`)
-    .then(res => setProduct(res.data))
+    .then(res => {
+      console.log(res.data)
+      if(res.data.disabled || res.data.quantity < 1) {
+        const token = localStorage.token
+        setAuthToken(JSON.parse(token));
+        axios.post('https://ricehouse.in/backend/api/cart/delete', { prodId: prod.prodId })
+        .then(res => {
+          setUpdate(!update)
+        })
+        .catch(err => {
+          toast("Failed to Delete", { 
+            type: "error", 
+            isLoading: false,
+            autoClose: 5000
+          });
+        })
+      } else {
+        setProduct(res.data)
+      }
+    })
     .catch(err => {
       toast("Failed to Load Cart", { 
         type: "error", 

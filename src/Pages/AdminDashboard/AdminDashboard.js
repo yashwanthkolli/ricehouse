@@ -12,6 +12,7 @@ import {
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import ProductsSection from "./ProductSection";
+import OrdersSection from "./OrdersSection";
 
 function TabPanel({ children, value, index }) {
   return (
@@ -71,8 +72,7 @@ const AdminDashboard = () => {
         </Tabs>
 
         <TabPanel value={tabIndex} index={0}>
-          <Typography variant="h6">Orders Section</Typography>
-          
+          <OrdersSection />
         </TabPanel>
 
         <TabPanel value={tabIndex} index={1}>
