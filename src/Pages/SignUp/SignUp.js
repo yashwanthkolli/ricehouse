@@ -62,7 +62,7 @@ const SignUp = () => {
       <div className='close' onClick={handleClose}>
         <IoIosClose />
       </div>
-      <div className='content'>
+      <div className='contenty'>
         <div className='close' onClick={handleClose}>
           <IoIosClose />
         </div>

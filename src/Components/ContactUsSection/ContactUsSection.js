@@ -30,7 +30,7 @@ const ContactUsSection = () => {
           </div>
           <div className='row'>
             <div className='address'>
-              <h3>Where To Find Us</h3>
+              <h3>Locate Us</h3>
               <p>
                 #12/2-66 Krishanappa Layout, <br />
                 R.R Nagar, Karekodi Main Road, <br />
@@ -66,7 +66,7 @@ const ContactUsSection = () => {
           >
             <FiMapPin className='link' />
           </a>
-          <a href='https://wa.me/918296935143' rel='noreferrer'>
+          <a href='https://wa.me/919916835143' rel='noreferrer'>
             <FaWhatsapp className='link' />
           </a>
         </div>
