@@ -70,13 +70,13 @@ const Menu = ({color}) => {
                         <a href='mailto:varija.3005@gmail.com' rel='noreferrer'>
                             <FiMail className='link' />
                         </a>
-                        <a href='tel:8296935143' rel='noreferrer'>
+                        <a href='tel:9916835143' rel='noreferrer'>
                             <FiPhone className='link' />
                         </a>
-                        <a href='https://maps.app.goo.gl/KzMGdqWkogRHqBqV6' target='_blanck' rel='noreferrer'>
+                        <a href='https://maps.app.goo.gl/am1prqMjPrST6z4y9' target='_blanck' rel='noreferrer'>
                             <FiMapPin className='link' />
                         </a>
-                        <a href='https://wa.me/918971545421' rel='noreferrer'>
+                        <a href='https://wa.me/919916835143' rel='noreferrer'>
                             <FaWhatsapp className='link' />
                         </a>
                     </div>
