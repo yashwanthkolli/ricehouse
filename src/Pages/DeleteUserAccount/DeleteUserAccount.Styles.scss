@@ -1,0 +1,83 @@
+.delete-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+  padding: 20px;
+
+  
+.delete-box {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.delete-title {
+  text-align: center;
+  color: #c0392b;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.delete-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.form-input {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #c0392b;
+}
+
+.form-button {
+  padding: 12px;
+  background-color: #c0392b;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-button:hover {
+  background-color: #a93226;
+}
+
+.form-button:disabled {
+  background-color: #e6b0aa;
+  cursor: not-allowed;
+}
+
+.form-message {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.form-message.success {
+  color: green;
+}
+
+.form-message.error {
+  color: red;
+}
+}

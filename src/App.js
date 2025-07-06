@@ -26,6 +26,7 @@ import Profile from './Pages/Profile/Profile';
 import ResetPassword from './Pages/ResetPassword/ResetPassword';
 import AdminLogin from './Pages/AdminLogin/AdminLogin';
 import AdminDashboard from './Pages/AdminDashboard/AdminDashboard';
+import DeleteAccount from './Pages/DeleteUserAccount/DeleteUserAccount';
 
 function App() {
   useEffect(() => {
@@ -54,6 +55,7 @@ function App() {
         <Route path='/admin/login' element={<AdminLogin />} />
         <Route path='/admin' element={<AdminDashboard />} />
         {/* <Route path='/service/:serviceName' exact component={ServicePage} /> */}
+        <Route path='/auth/delete/user' element={<DeleteAccount />} />
       </Routes>
     </div>
   );
