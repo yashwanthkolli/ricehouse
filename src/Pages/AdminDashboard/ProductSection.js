@@ -93,7 +93,7 @@ const ProductsSection = () => {
   const handleCreateProduct = async () => {
     try {
       console.log(newProduct)
-      const res = await axios.post("http://localhost:5000/api/prod", newProduct, {
+      const res = await axios.post("https://ricehouse.in/backend/api/prod", newProduct, {
         headers: { Authorization: token }
       });
       setProducts((prev) => [...prev, res.data]);
