@@ -7,7 +7,7 @@ const Input = ({placeholder, type, value, onChange, white, icon}) => {
             <label className="input">
                 <input className="input__field" type={type} value={value} placeholder=" " onChange={onChange} />
                 <span className="input__label" style={{background: white ? '#fff' : '#E7D3B2'}}>{placeholder}</span>
-                {icon && <div className='icon-container'>{icon}</div>}
+                {icon && <span className='icon-container'>{icon}</span>}
             </label>
         </div>
     )
