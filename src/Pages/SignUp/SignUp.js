@@ -8,11 +8,13 @@ import './SignUp.Styles.scss'
 import loginImg from '../../Assets/Login/login.jpg'
 import Input from '../../Components/Input/Input'
 import axios from 'axios'
+import { FaEyeSlash, FaEye } from 'react-icons/fa'
 
 const SignUp = () => {
   const [name, setName] = useState('')
   const [phone, setPhone] = useState('')
   const [password, setPassword] = useState('')
+  const [passwordVisible, setPasswordVisible] = useState(false)
   const navigate = useNavigate()
 
   const handleNameChange = e => {
@@ -103,8 +105,9 @@ const SignUp = () => {
             <Input
               placeholder='Password'
               value={password}
-              type='password'
+              type={passwordVisible ? 'text' : 'password'}
               onChange={handlePasswordChange}
+              icon={passwordVisible ? <FaEyeSlash onClick={() => setPasswordVisible(prev => !prev)} /> : <FaEye onClick={() => setPasswordVisible(prev => !prev)} />}
             />
           </div>
           <div className='buttons-container'>

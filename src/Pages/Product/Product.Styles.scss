@@ -195,6 +195,16 @@
                 }
             }
         }
+
+        .product-warning {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 3rem;
+            font-size: 14px;
+            text-align: center;
+            color: #FFBC11;
+        }
     }
 }
 
@@ -224,6 +234,10 @@
                 .details{
                     width: 100%;
                 }
+            }
+
+            .product-warning {
+                bottom: -8rem;
             }
         }
     }

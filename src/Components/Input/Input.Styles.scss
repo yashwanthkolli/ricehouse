@@ -64,6 +64,13 @@
                 }
             }
         }
+
+        .icon-container {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-40%);
+            right: 2rem;
+        }
     }
 }
 

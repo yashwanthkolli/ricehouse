@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { FcGoogle } from 'react-icons/fc'
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { IoIosClose } from 'react-icons/io'
 import './Login.Styles.scss'
 
@@ -14,6 +14,7 @@ const Login = () => {
   const [password, setPassword] = useState('')
   const [isOpen, setIsOpen] = useState(false);
   const [resetPhone, setResetPhone] = useState('')
+  const [passwordVisible, setPasswordVisible] = useState(false)
   const dialogRef = useRef()
   const navigate = useNavigate()
 
@@ -123,10 +124,11 @@ const Login = () => {
               onChange={handlePhoneChange}
             />
             <Input
-            value={password}
+              value={password}
               placeholder='Password'
-              type='password'
+              type={passwordVisible ? 'text' : 'password'}
               onChange={handlePasswordChange}
+              icon={passwordVisible ? <FaEyeSlash onClick={() => setPasswordVisible(prev => !prev)} /> : <FaEye onClick={() => setPasswordVisible(prev => !prev)} />}
             />
             <div className='forgot-password-container'>
               <button className='forgot-password' onClick={openDialog}>Forgot Password</button>

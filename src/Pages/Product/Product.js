@@ -134,6 +134,7 @@ const Product = () => {
                             
                         </div>
                     </div> */}
+                    <div className='product-warning'>Add a total of 10 items to cart for Wholesale Prices.</div>
                 </div>
             </div>
             <div className='footer'>

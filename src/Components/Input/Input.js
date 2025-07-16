@@ -1,12 +1,13 @@
 import React from 'react'
 import './Input.Styles.scss'
 
-const Input = ({placeholder, type, value, onChange, white}) => {
+const Input = ({placeholder, type, value, onChange, white, icon}) => {
     return (
         <div className="input-container">
             <label className="input">
                 <input className="input__field" type={type} value={value} placeholder=" " onChange={onChange} />
                 <span className="input__label" style={{background: white ? '#fff' : '#E7D3B2'}}>{placeholder}</span>
+                {icon && <div className='icon-container'>{icon}</div>}
             </label>
         </div>
     )
