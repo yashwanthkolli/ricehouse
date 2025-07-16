@@ -76,35 +76,42 @@
 
 @media only screen and (max-width: 768px) {
     .input-container{
-      margin-bottom: 2rem;  
+        margin-bottom: 2rem;  
 
-      .input{
-        font-size: 1.4rem;
-        line-height: 2rem;
+        .input{
+            font-size: 1.4rem;
+            line-height: 2rem;
 
-        &__label{
-            padding: 0.8rem;
-            margin: 0.8rem;
-        }
+            &__label{
+                padding: 0.8rem;
+                margin: 0.8rem;
+            }
 
-        @supports (-webkit-touch-callout: none) {
-            /* CSS specific to iOS devices */ 
-            &__label {
-                top: -4.7rem;
+            @supports (-webkit-touch-callout: none) {
+                /* CSS specific to iOS devices */ 
+                &__label {
+                    top: -4.7rem;
+                }
+            }
+
+            @supports not (-webkit-touch-callout: none) {
+                /* CSS for other than iOS devices */ 
+                &__label {
+                    top: 0rem;
+                }
+            }
+
+            &__field {
+                padding: 1.3rem;
+            }
+
+            .icon-container {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-40%);
+                right: 2rem;
             }
         }
-
-        @supports not (-webkit-touch-callout: none) {
-            /* CSS for other than iOS devices */ 
-            &__label {
-                top: 0rem;
-            }
-        }
-
-        &__field {
-            padding: 1.3rem;
-        }
-      }
     }
     
 }
