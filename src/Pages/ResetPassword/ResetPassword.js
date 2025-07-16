@@ -52,7 +52,7 @@ const ResetPassword = () => {
         isLoading: false,
         autoClose: 5000
       });
-      setTimeout(() => navigate('/login'), 2000);
+      setTimeout(() => navigate('/'), 2000);
     })
     .catch(err => {
       toast("Passwords couldn't be changed right now. Please try later.", { 

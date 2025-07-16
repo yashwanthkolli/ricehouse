@@ -41,7 +41,7 @@ const SignUp = () => {
           isLoading: false,
           autoClose: 2000,
         })
-        navigate(-1)
+        navigate('')
       })
       .catch(err => {
         setName('')
