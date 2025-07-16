@@ -50,7 +50,7 @@ const OrderStatus = () => {
               <p>Your payment has been <span className='error'>failed</span>. Your order is not complete. Please try again!</p>
             }
             <div className='links'>
-              <Link to='/'>Shop Again</Link>
+              <Link to='/home'>Shop Again</Link>
               <Link to='/orders'>Orders</Link>
             </div>
           </div>

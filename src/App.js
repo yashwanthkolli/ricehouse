@@ -37,8 +37,8 @@ function App() {
     <div className="App">
       <ToastContainer position='bottom-right' />
       <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='/login' element={<Login />} />
+        <Route path='/home' element={<HomePage />} />
+        <Route path='/' element={<Login />} />
         <Route path='/signup' element={<SignUp />} />
         <Route path='/wholesale' element={<Wholesale />} />
         <Route path='/retail' element={<Retail />} />

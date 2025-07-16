@@ -48,7 +48,7 @@ const SignUp = () => {
         setPhone('')
         setPassword('')
         toast.update(id, {
-          render: 'User not found!',
+          render: 'User already exist with this email. Please login.',
           type: 'error',
           isLoading: false,
           autoClose: 5000,
@@ -81,7 +81,7 @@ const SignUp = () => {
             </p>
             <p className='text'>
               Already have an account?{' '}
-              <Link className='bold' to='/login'>
+              <Link className='bold' to='/'>
                 Login here
               </Link>
             </p>

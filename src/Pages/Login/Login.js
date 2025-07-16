@@ -59,7 +59,7 @@ const Login = () => {
         setPhone('')
         setPassword('')
         toast.update(id, {
-          render: 'User not found!',
+          render: 'User not found! Create an account.',
           type: 'error',
           isLoading: false,
           autoClose: 5000,
