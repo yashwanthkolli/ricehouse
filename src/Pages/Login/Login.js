@@ -8,6 +8,7 @@ import signUpImg from '../../Assets/Login/signUp.jpg'
 import Input from '../../Components/Input/Input'
 import { toast } from 'react-toastify'
 import axios from 'axios'
+import setAuthToken from '../../utils/setAuthToken';
 
 const Login = () => {
   const [phone, setPhone] = useState('')
@@ -17,6 +18,23 @@ const Login = () => {
   const [passwordVisible, setPasswordVisible] = useState(false)
   const dialogRef = useRef()
   const navigate = useNavigate()
+
+  useEffect(() => {
+    const token = localStorage.token
+    if(token) {
+      setAuthToken(JSON.parse(token));
+      axios.get('https://ricehouse.in/backend/api/auth/user')
+      .then(res => res.data.phone ? navigate('/home') : null)
+      .catch(err => {
+        localStorage.removeItem('token')
+        toast("user data error. Login again", { 
+          type: "error", 
+          isLoading: false,
+          autoClose: 5000
+        });
+      })
+    }
+  }, [])
 
   useEffect(() => {
       if (isOpen) {
@@ -53,7 +71,7 @@ const Login = () => {
           isLoading: false,
           autoClose: 2000,
         })
-        navigate('/')
+        navigate('/home')
       })
       .catch(err => {
         setPhone('')

@@ -36,19 +36,19 @@ const SignUp = () => {
       .then(res => {
         localStorage.setItem('token', JSON.stringify(res.data.token))
         toast.update(id, {
-          render: 'Login Successful',
+          render: 'Account Created',
           type: 'success',
           isLoading: false,
           autoClose: 2000,
         })
-        navigate('')
+        navigate('/home')
       })
       .catch(err => {
         setName('')
         setPhone('')
         setPassword('')
         toast.update(id, {
-          render: 'User already exist with this email. Please login.',
+          render: err.message || 'User already exist with this email. Please login.',
           type: 'error',
           isLoading: false,
           autoClose: 5000,
@@ -57,7 +57,7 @@ const SignUp = () => {
   }
 
   const handleClose = () => {
-    navigate(-1)
+    navigate('/home')
   }
   return (
     <div className='login-page'>

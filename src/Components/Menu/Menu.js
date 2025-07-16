@@ -50,7 +50,7 @@ const Menu = ({color}) => {
             </div>
             <div className={`menu ${open ? 'visible' : 'invisible'}`}>
                 <div className='menu-items'>
-                    <Link className='menu-option' to='/'><span>Home</span></Link>
+                    <Link className='menu-option' to='/home'><span>Home</span></Link>
                     <Link className='menu-option' to='/#about-us-section'><span>About Us</span></Link>
                     <Link className='menu-option' to='/wholesale'><span>Buy Wholesale</span></Link>
                     <Link className='menu-option' to='/retail'><span>Buy Retail</span></Link>
