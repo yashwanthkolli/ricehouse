@@ -15,6 +15,7 @@ const SignUp = () => {
   const [phone, setPhone] = useState('')
   const [password, setPassword] = useState('')
   const [passwordVisible, setPasswordVisible] = useState(false)
+  const [error, setError] = useState({})
   const navigate = useNavigate()
 
   const handleNameChange = e => {
@@ -33,7 +34,9 @@ const SignUp = () => {
     const id = toast.loading('Please wait...')
     await axios
       .post(`https://ricehouse.in/backend/api/users`, { name, phone, password })
+      // .post(`http://localhost:5000/api/users`, { name, phone, password })
       .then(res => {
+        console.log(res)
         localStorage.setItem('token', JSON.stringify(res.data.token))
         toast.update(id, {
           render: 'Account Created',
@@ -44,16 +47,28 @@ const SignUp = () => {
         navigate('/home')
       })
       .catch(err => {
-        setName('')
-        setPhone('')
-        setPassword('')
+        setError(err)
         toast.update(id, {
-          render: err.message || 'User already exist with this email. Please login.',
+          render: 'User already exist with this email. Please login.',
           type: 'error',
           isLoading: false,
           autoClose: 5000,
         })
+        setName('')
+        setPhone('')
+        setPassword('')
       })
+  }
+
+  if (error.response) {
+    return (
+      <div>
+        {JSON.stringify(error.response)}
+        <div>
+        {JSON.stringify(error)}
+        </div>
+      </div>
+    )
   }
 
   const handleClose = () => {
@@ -88,6 +103,7 @@ const SignUp = () => {
           </div>
         </div>
         <div className='login-container'>
+          
           <div className='logo-container'>Rice House</div>
           <div className='inputs'>
             <Input
