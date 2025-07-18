@@ -44,12 +44,11 @@ const SignUp = () => {
         navigate('/home')
       })
       .catch(err => {
-        console.log(err)
         setName('')
         setPhone('')
         setPassword('')
         toast.update(id, {
-          render: err || 'User already exist with this email. Please login.',
+          render: 'User already exist with this email. Please login.',
           type: 'error',
           isLoading: false,
           autoClose: 5000,
