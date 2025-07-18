@@ -48,6 +48,14 @@ const SignUp = () => {
       })
       .catch(err => {
         setError(err)
+        return (
+          <div>
+            {JSON.stringify(error.response)}
+            <div>
+            {JSON.stringify(error)}
+            </div>
+          </div>
+        )
         toast.update(id, {
           render: 'User already exist with this email. Please login.',
           type: 'error',
