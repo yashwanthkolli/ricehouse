@@ -27,6 +27,7 @@ import ResetPassword from './Pages/ResetPassword/ResetPassword';
 import AdminLogin from './Pages/AdminLogin/AdminLogin';
 import AdminDashboard from './Pages/AdminDashboard/AdminDashboard';
 import DeleteAccount from './Pages/DeleteUserAccount/DeleteUserAccount';
+import UniversalContactSection from './Components/UniversalContactSection/UniversalContactSection';
 
 function App() {
   useEffect(() => {
@@ -35,6 +36,7 @@ function App() {
 
   return (
     <div className="App">
+      <UniversalContactSection />
       <ToastContainer position='bottom-right' />
       <Routes>
         <Route path='/home' element={<HomePage />} />

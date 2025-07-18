@@ -22,7 +22,7 @@ const Login = () => {
   useEffect(() => {
     const token = localStorage.token
     if(token) {
-      setAuthToken(JSON.parse(token));
+      setAuthToken(token);
       axios.get('https://ricehouse.in/backend/api/auth/user')
       .then(res => res.data.phone ? navigate('/home') : null)
       .catch(err => {

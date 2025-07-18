@@ -1,0 +1,39 @@
+.uni-contact {
+  position: fixed;
+  z-index: 1000;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 3rem;
+  padding: 2rem 1rem;
+  gap: 1rem;
+  border-radius: 2rem 0 0 2rem;
+  animation: bg 1s linear 0s infinite alternate;
+
+  .whatsapp {
+    color: #075E54;
+  }
+
+  .call {
+    color: black;
+  }
+
+  .location {
+    color: rgb(165, 0, 0);
+  }
+
+  .mail {
+    color: rgb(213, 185, 0);
+  }
+}
+
+@keyframes bg {
+  0% {
+    background: #9cecfb;
+  }
+  100% {
+    background: #4992b7;
+  }
+}

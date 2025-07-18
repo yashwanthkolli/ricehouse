@@ -16,12 +16,12 @@ const AboutUsSection = () => {
           <div className='row' data-aos='fade-up' data-aos-duration='1000'>
             <h4 className='sub-heading'>About Us</h4>
             <h1 className='heading'>
-              Experience Taste of Tradition from Land of Paddy- Siruguppa
+              Experience Taste of Tradition from Land of Paddy
             </h1>
             <p className='text'>
               Welcome to Rice House, where tradition meets quality in every
               grain of rice. Rooted in the heart of the finest paddy fields of
-              Siruguppa, we believe in delivering purity, freshness, and
+              , we believe in delivering purity, freshness, and
               authenticity. Whether for daily meals or special occasions, our
               rice enhances every dish with its superior texture and flavor.
             </p>
@@ -110,7 +110,7 @@ const AboutUsSection = () => {
               </div>
               <p className='text'>
                 Serving with trust, honesty, and excellence directly from
-                Siruguppa's finest paddy fields.
+                India's finest paddy fields.
               </p>
             </div>
           </div>
