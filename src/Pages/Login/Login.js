@@ -24,7 +24,7 @@ const Login = () => {
     if(token) {
       setAuthToken(token);
       console.log(token)
-      axios.get('http://localhost:5000/api/auth/user')
+      axios.get('https://ricehouse.in/backend/api/auth/user')
       .then(res => res.data.phone ? navigate('/home') : null)
       .catch(err => {
         console.log(err)
@@ -64,7 +64,7 @@ const Login = () => {
   const handleLogin = async () => {
     const id = toast.loading('Please wait...')
     await axios
-      .post(`http://localhost:5000/api/auth`, { phone })
+      .post(`https://ricehouse.in/backend/api/auth`, { phone })
       .then(res => {
         localStorage.setItem('token', JSON.stringify(res.data.token))
         toast.update(id, {
