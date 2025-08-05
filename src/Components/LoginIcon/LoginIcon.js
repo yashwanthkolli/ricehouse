@@ -25,7 +25,7 @@ const LoginIcon = ({color}) => {
       <div className='login-icon'>
           <div className='options' style={{display: isExpired ? 'flex' : 'none'}}>
               <Link className={`option ${color === 'dark' ? 'option-dark' : 'option-light'}`} to='/signup'>Sign Up</Link>
-              <Link className={`option ${color === 'dark' ? 'option-dark' : 'option-light'}`} to='/'>Login</Link>
+              <Link className={`option ${color === 'dark' ? 'option-dark' : 'option-light'}`} to='/login'>Login</Link>
           </div>
           <div className='icons' style={{display: isExpired ? 'none' : 'flex'}}>
             <Menu menuButton={<div className={`icon ${color === 'dark' ? 'icon-dark' : 'icon-light'}`}><FaRegUserCircle /></div>} transition>

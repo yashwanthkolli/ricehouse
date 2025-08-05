@@ -12,10 +12,10 @@ import setAuthToken from '../../utils/setAuthToken';
 
 const Login = () => {
   const [phone, setPhone] = useState('')
-  const [password, setPassword] = useState('')
+  // const [password, setPassword] = useState('')
   const [isOpen, setIsOpen] = useState(false);
-  const [resetPhone, setResetPhone] = useState('')
-  const [passwordVisible, setPasswordVisible] = useState(false)
+  // const [resetPhone, setResetPhone] = useState('')
+  // const [passwordVisible, setPasswordVisible] = useState(false)
   const dialogRef = useRef()
   const navigate = useNavigate()
 
@@ -23,9 +23,11 @@ const Login = () => {
     const token = localStorage.token
     if(token) {
       setAuthToken(token);
-      axios.get('https://ricehouse.in/backend/api/auth/user')
+      console.log(token)
+      axios.get('http://localhost:5000/api/auth/user')
       .then(res => res.data.phone ? navigate('/home') : null)
       .catch(err => {
+        console.log(err)
         localStorage.removeItem('token')
         toast("user data error. Login again", { 
           type: "error", 
@@ -51,18 +53,18 @@ const Login = () => {
     setPhone(e.target.value)
   }
 
-  const handlePasswordChange = e => {
-    setPassword(e.target.value)
-  }
+  // const handlePasswordChange = e => {
+  //   setPassword(e.target.value)
+  // }
 
-  const handleResetPhoneChange = e => {
-    setResetPhone(e.target.value)
-  }
+  // const handleResetPhoneChange = e => {
+  //   setResetPhone(e.target.value)
+  // }
 
   const handleLogin = async () => {
     const id = toast.loading('Please wait...')
     await axios
-      .post(`https://ricehouse.in/backend/api/auth`, { phone, password })
+      .post(`http://localhost:5000/api/auth`, { phone })
       .then(res => {
         localStorage.setItem('token', JSON.stringify(res.data.token))
         toast.update(id, {
@@ -71,11 +73,11 @@ const Login = () => {
           isLoading: false,
           autoClose: 2000,
         })
-        navigate('/home')
+        navigate('/')
       })
       .catch(err => {
         setPhone('')
-        setPassword('')
+        // setPassword('')
         toast.update(id, {
           render: 'User not found! Create an account.',
           type: 'error',
@@ -89,25 +91,25 @@ const Login = () => {
     navigate(-1)
   }
 
-  const handleResetPassword = async () => {
-    await axios.post('https://ricehouse.in/backend/api/auth/changepassword', { phone: resetPhone })
-    .then(res => {
-      setIsOpen(false)
-      setPhone('')
-      toast("Email sent Successfully", { 
-        type: "success", 
-        isLoading: false,
-        autoClose: 5000
-      });
-    })
-    .catch(err => {
-      toast("Failed to Send Email", { 
-        type: "error", 
-        isLoading: false,
-        autoClose: 5000
-      });
-    })
-  };
+  // const handleResetPassword = async () => {
+  //   await axios.post('https://ricehouse.in/backend/api/auth/changepassword', { phone: resetPhone })
+  //   .then(res => {
+  //     setIsOpen(false)
+  //     setPhone('')
+  //     toast("Email sent Successfully", { 
+  //       type: "success", 
+  //       isLoading: false,
+  //       autoClose: 5000
+  //     });
+  //   })
+  //   .catch(err => {
+  //     toast("Failed to Send Email", { 
+  //       type: "error", 
+  //       isLoading: false,
+  //       autoClose: 5000
+  //     });
+  //   })
+  // };
 
   return (
     <div className='login-page'>
@@ -137,20 +139,20 @@ const Login = () => {
           <div className='inputs'>
             <Input
               value={phone}
-              placeholder='Email'
+              placeholder='Email or Phone No.'
               type='text'
               onChange={handlePhoneChange}
             />
-            <Input
+            {/* <Input
               value={password}
               placeholder='Password'
               type={passwordVisible ? 'text' : 'password'}
               onChange={handlePasswordChange}
               icon={passwordVisible ? <FaEyeSlash onClick={() => setPasswordVisible(prev => !prev)} /> : <FaEye onClick={() => setPasswordVisible(prev => !prev)} />}
-            />
-            <div className='forgot-password-container'>
+            /> */}
+            {/* <div className='forgot-password-container'>
               <button className='forgot-password' onClick={openDialog}>Forgot Password</button>
-            </div>
+            </div> */}
           </div>
           <div className='buttons-container'>
             <button className='button' onClick={handleLogin}>
@@ -166,7 +168,7 @@ const Login = () => {
           </button> */}
         </div>
       </div>
-      <dialog className='address-dialog' ref={dialogRef} onCancel={closeDialog}>
+      {/* <dialog className='address-dialog' ref={dialogRef} onCancel={closeDialog}>
           <div className='content'>
             <div className='text'>Please enter the email accociated with the account. You will receive a password reset link. Please check your spam folder as well.</div>
             <Input
@@ -181,7 +183,7 @@ const Login = () => {
           <div className='close' onClick={closeDialog}>
             <IoIosClose />
           </div>
-        </dialog>
+        </dialog> */}
     </div>
   )
 }

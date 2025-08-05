@@ -13,8 +13,8 @@ import { FaEyeSlash, FaEye } from 'react-icons/fa'
 const SignUp = () => {
   const [name, setName] = useState('')
   const [phone, setPhone] = useState('')
-  const [password, setPassword] = useState('')
-  const [passwordVisible, setPasswordVisible] = useState(false)
+  // const [password, setPassword] = useState('')
+  // const [passwordVisible, setPasswordVisible] = useState(false)
   const navigate = useNavigate()
 
   const handleNameChange = e => {
@@ -25,14 +25,14 @@ const SignUp = () => {
     setPhone(e.target.value)
   }
 
-  const handlePasswordChange = e => {
-    setPassword(e.target.value)
-  }
+  // const handlePasswordChange = e => {
+  //   setPassword(e.target.value)
+  // }
 
   const handleSignUp = async () => {
     const id = toast.loading('Please wait...')
     await axios
-      .post(`https://ricehouse.in/backend/api/users`, { name, phone, password })
+      .post(`https://ricehouse.in/backend/api/users`, { name, phone })
       .then(res => {
         localStorage.setItem('token', JSON.stringify(res.data.token))
         toast.update(id, {
@@ -41,12 +41,12 @@ const SignUp = () => {
           isLoading: false,
           autoClose: 2000,
         })
-        navigate('/home')
+        navigate('/')
       })
       .catch(err => {
         setName('')
         setPhone('')
-        setPassword('')
+        // setPassword('')
         toast.update(id, {
           render: 'User already exist with this email. Please login.',
           type: 'error',
@@ -57,7 +57,7 @@ const SignUp = () => {
   }
 
   const handleClose = () => {
-    navigate('/home')
+    navigate('/')
   }
   return (
     <div className='login-page'>
@@ -81,7 +81,7 @@ const SignUp = () => {
             </p>
             <p className='text'>
               Already have an account?{' '}
-              <Link className='bold' to='/'>
+              <Link className='bold' to='/login'>
                 Login here
               </Link>
             </p>
@@ -97,18 +97,18 @@ const SignUp = () => {
               onChange={handleNameChange}
             />
             <Input
-              placeholder='EMail'
+              placeholder='EMail or Phone No.'
               value={phone}
               type='text'
               onChange={handlePhoneChange}
             />
-            <Input
+            {/* <Input
               placeholder='Password'
               value={password}
               type={passwordVisible ? 'text' : 'password'}
               onChange={handlePasswordChange}
               icon={passwordVisible ? <FaEyeSlash onClick={() => setPasswordVisible(prev => !prev)} /> : <FaEye onClick={() => setPasswordVisible(prev => !prev)} />}
-            />
+            /> */}
           </div>
           <div className='buttons-container'>
             <button className='button' onClick={handleSignUp}>

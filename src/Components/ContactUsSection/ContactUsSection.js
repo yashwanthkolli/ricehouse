@@ -24,22 +24,21 @@ const ContactUsSection = () => {
             </div>
             <div className='phone'>
               <h3>Mail Us</h3>
-              <p>ricehouse143@gmail.com</p>
-              <p>varija.3005@gmail.com</p>
+              <p>ricehouse.blr@gmail.com</p>
             </div>
           </div>
           <div className='row'>
             <div className='address'>
               <h3>Locate Us</h3>
               <p>
-                #12/2-66 Krishanappa Layout, <br />
+                1.&nbsp;&nbsp; #12/2-66 Krishanappa Layout, <br />
                 R.R Nagar, Karekodi Main Road, <br />
                 Hoskerehalli, Bangalore- 85
               </p>
             </div>
             <div className='mail'>
               <p>
-                No. 12, 3rd Cross, 1st <br />
+                2.&nbsp;&nbsp; No. 12, 3rd Cross, 1st <br />
                 Main Road, Vinayaka Layout, <br />
                 Nayandalli, Bangalore- 39
               </p>
@@ -53,7 +52,7 @@ const ContactUsSection = () => {
           <Link className='link' to='/privacypolicy'>Privacy Policy</Link>
         </div>
         <div className='links'>
-          <a href='mailto:varija.3005@gmail.com' rel='noreferrer'>
+          <a href='mailto:ricehouse.blr@gmail.com' rel='noreferrer'>
             <FiMail className='link' />
           </a>
           <a href='tel:9916835143' rel='noreferrer'>

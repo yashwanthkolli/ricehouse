@@ -22,7 +22,7 @@ class MapSection extends React.Component {
         return (
             <div className='map-section'>
                 <div className='map-container' id='mapid' data-aos="fade-up" data-aos-duration="1000">	
-                    <MapContainer center={[12.935734, 77.525311]} zoom={14} scrollWheelZoom={false}>
+                    <MapContainer center={[12.935734, 77.525311]} zoom={14} scrollWheelZoom={false} touchZoom={false} dragging={false}>
                         <TileLayer
                         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

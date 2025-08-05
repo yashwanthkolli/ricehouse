@@ -50,7 +50,7 @@ const Menu = ({color}) => {
             </div>
             <div className={`menu ${open ? 'visible' : 'invisible'}`}>
                 <div className='menu-items'>
-                    <Link className='menu-option' to='/home'><span>Home</span></Link>
+                    <Link className='menu-option' to='/'><span>Home</span></Link>
                     <Link className='menu-option' to='/#about-us-section'><span>About Us</span></Link>
                     <Link className='menu-option' to='/wholesale'><span>Buy Wholesale</span></Link>
                     <Link className='menu-option' to='/retail'><span>Buy Retail</span></Link>
@@ -67,7 +67,7 @@ const Menu = ({color}) => {
                     </div>
                     <div className='text'>Our team at Rice House aim to provide best products at affordable prices. We assure you of the highest quality services, business integrity, and cooperation.</div>
                     <div className='links'>
-                        <a href='mailto:varija.3005@gmail.com' rel='noreferrer'>
+                        <a href='mailto:ricehouse.blr@gmail.com' rel='noreferrer'>
                             <FiMail className='link' />
                         </a>
                         <a href='tel:9916835143' rel='noreferrer'>

@@ -27,7 +27,7 @@ const Profile = () => {
   
   useEffect(() => {
     const token = localStorage.token
-    if(!token) return navigate('/');
+    if(!token) return navigate('/login');
     setAuthToken(JSON.parse(token));
     axios.get('https://ricehouse.in/backend/api/auth/user')
     .then(res => setUser(res.data))
@@ -81,7 +81,7 @@ const Profile = () => {
           </div>
           <div className='password'>
             Click the following buttton to get password reset link. You will recieve a mail with Password reset link. Please check your spam folder as well.
-            <button className='button' onClick={openDialog}>Reset Password</button>
+            {/* <button className='button' onClick={openDialog}>Reset Password</button> */}
           </div>
           <div className='buttons'>
             <Link to='/cart'><button className='button'>View Cart</button></Link>
